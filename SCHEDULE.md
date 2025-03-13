@@ -47,6 +47,7 @@
      Viết báo cáo chi tiết về phương pháp, kết quả và bài học rút ra.
      Chuẩn bị slides/thuyết trình về dự án.
      Luyện tập trình bày trước để có thể giải thích rõ ràng về mô hình.
+   
    **+ Tuần 13: Tổng kết & Hoàn thành**
    
      Nộp báo cáo & hoàn thành bài thuyết trình.
