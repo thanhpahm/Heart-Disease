@@ -4,7 +4,7 @@
    * Thành viên:
       + Phạm Công Thành - 3122410386
       + Hồ Hoàng Nhật Tâm -312241068
-      + Phạm Minh Nhật - 3122410
+      + Phạm Hữu Nghĩa - 3122410261
       + Bùi Lê Duy Thái -3122410
    * Kế hoạch dự kiến
    * Liên kết:
