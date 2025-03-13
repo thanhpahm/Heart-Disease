@@ -53,6 +53,6 @@
      Kiểm tra lại tất cả các bước để đảm bảo không bỏ sót gì.
      Đánh giá hiệu suất mô hình & đề xuất hướng phát triển tiếp theo.
    * Liên kết:
-      + [schedule.xlsx](#)
+      + [schedule.xlsx](https://github.com/thanhpahm/Heart-Disease/blob/gh-pages/schedule.xlsx)
    * Tổ chức công việc nhóm
 
