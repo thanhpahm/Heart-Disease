@@ -7,7 +7,8 @@
       + Phạm Hữu Nghĩa - 3122410261
       + Bùi Lê Duy Thái -3122410
    * Kế hoạch dự kiến
-      **###Tuần 6-7: Tiền xử lý dữ liệu & Chọn mô hình**
+
+     **###Tuần 6-7: Tiền xử lý dữ liệu & Chọn mô hình**
    Hoàn thiện làm sạch dữ liệu: xử lý dữ liệu bị thiếu, loại bỏ outliers.
    Chuẩn hóa dữ liệu nếu cần (scaling, encoding categorical features).
    Khám phá dữ liệu (EDA) để tìm mối quan hệ giữa các biến.
