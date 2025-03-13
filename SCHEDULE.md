@@ -8,7 +8,7 @@
       + Bùi Lê Duy Thái -3122410
    * Kế hoạch dự kiến
 
-       **+ Tuần 6-7: Tiền xử lý dữ liệu & Chọn mô hình**
+    **+ Tuần 6-7: Tiền xử lý dữ liệu & Chọn mô hình**
      
     Hoàn thiện làm sạch dữ liệu: xử lý dữ liệu bị thiếu, loại bỏ outliers.
     Chuẩn hóa dữ liệu nếu cần (scaling, encoding categorical features).
@@ -16,7 +16,7 @@
     Chia tập dữ liệu thành tập train/test/validation.
     Chọn mô hình ban đầu (Logistic Regression, Random Forest, SVM, Neural Network…).
 
-     **+ Tuần 8: Huấn luyện mô hình & Điều chỉnh tham số**
+    **+ Tuần 8: Huấn luyện mô hình & Điều chỉnh tham số**
    
     Huấn luyện các mô hình đã chọn với tập dữ liệu huấn luyện.
     Đánh giá hiệu suất mô hình ban đầu (accuracy, precision, recall, F1-score, ROC-AUC).
