@@ -5,7 +5,7 @@
       + Phạm Công Thành - 3122410386
       + Hồ Hoàng Nhật Tâm -312241068
       + Phạm Hữu Nghĩa - 3122410261
-      + Bùi Lê Duy Thái -3122410
+      + Bùi Lê Duy Thái -3122410377
    * Kế hoạch dự kiến
 
     **+ Tuần 6-7: Tiền xử lý dữ liệu & Chọn mô hình**
