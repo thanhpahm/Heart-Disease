@@ -18,7 +18,7 @@ def combine_xy(X,y):
 def load(datapath):
     # Convert dataset to a pandas dataframe:
     dataset = pd.read_csv(datapath, header=0) 
-    [X, y] = separate_xy(dataset)
+    X,y = dataset.iloc[:, :-1].values, dataset.iloc[:, -1].values
     return [X, y]
 
 def save(X,y,savepath):

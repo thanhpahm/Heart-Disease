@@ -1,11 +1,12 @@
-# DATA 
+# DATA
 datalink: "https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv"
-dataname: iris
+dataname: heart_dataset
 datarawdirectory: data/raw/
 datainterimdirectory: data/interim/
 dataprocesseddirectory: data/processed/
 
 # MODELS
+modeltype: RandomForestClassifier
 modelpath: models/model.pkl
 
 # RESULTS
