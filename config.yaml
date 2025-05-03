@@ -13,5 +13,36 @@ modelpath: models/model.pkl
 resultsrawpath: results/results_raw.pkl
 resultsevaluatedpath: results/results_evaluated.pkl
 
+# GRIDSEARCHCV PARAMS
+gridsearch_params:
+    RandomForestClassifier:
+        n_estimators: [100, 500, 1000]
+        max_depth: [None, 10, 20, 30]
+        min_samples_split: [2, 5, 10]
+        min_samples_leaf: [1, 2, 4]
+    SVC:
+        C: [0.1, 1, 10, 100]
+        gamma: [1, 0.1, 0.01, 0.001]
+        kernel: ["rbf", "linear"]
+    LogisticRegression:
+        penalty: ["l1", "l2", "elasticnet", None]
+        C: [0.1, 1, 10, 100]
+        solver: ["liblinear", "saga"] # Solvers supporting l1/elasticnet
+    DecisionTreeClassifier:
+        criterion: ["gini", "entropy"]
+        max_depth: [None, 10, 20, 30]
+        min_samples_split: [2, 5, 10]
+        min_samples_leaf: [1, 2, 4]
+    KNeighborsClassifier:
+        n_neighbors: [3, 5, 7, 9]
+        weights: ["uniform", "distance"]
+        metric: ["euclidean", "manhattan"]
+    MLPClassifier:
+        hidden_layer_sizes: [(50, 50, 50), (50, 100, 50), (100, )]
+        activation: ["tanh", "relu"]
+        solver: ["sgd", "adam"]
+        alpha: [0.0001, 0.05]
+        learning_rate: ["constant", "adaptive"]
+
 # VISUALIZATION
 figuredirectory: reports/figures/

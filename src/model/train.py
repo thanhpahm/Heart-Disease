@@ -8,7 +8,7 @@ def train(config):
     [X, y] = dataio.load(filepath)
     
     # Train the model
-    Model = model.Model()
+    Model = model.Model(config)
     Model.train(X,y)
     
     # Save the trained model
