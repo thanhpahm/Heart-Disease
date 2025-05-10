@@ -16,15 +16,15 @@ def confusion(y_true,y_pred,labels):
 def visualize_results(Results,outfolder):
     # Create and save all visualizations
     fig = confusion(Results.y_true,Results.y_pred,Results.classes)
-    fig.savefig(outfolder + 'confusion.png', dpi=600)
+    fig.savefig(outfolder + 'confusion' + config["modeltype"] + '.png', dpi=600)
 
 if __name__ == "__main__":
     # Load the results
     config = tools.load_config()
-    resultspath = config["resultsevaluatedpath"]
+    resultspath = config["resultsevaluatedpath"] + config["modeltype"] + ".p"
     Results = tools.pickle_load(resultspath)
     
     # Produce and save the figure
     figuredirectory = config["figuredirectory"]
-    visualize_results(Results, figuredirectory)
+    visualize_results(Results, figuredirectory + f"{config["modeltype"]}_")
     

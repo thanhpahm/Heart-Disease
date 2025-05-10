@@ -9,7 +9,7 @@ def predict(config):
     [X, y] = dataio.load(filepath)
     
     # Load the model
-    modelpath = config["modelpath"]
+    modelpath = config["modelpath"] + config["modeltype"] + ".pkl"
     Model = tools.pickle_load(modelpath)
     
     # Make predictions from the trained model
@@ -17,7 +17,7 @@ def predict(config):
     
     # Save results to a convenient data structure
     Result = evaluate.Results(y,y_hat,classes)
-    resultspath = config["resultsrawpath"]
+    resultspath = config["resultsrawpath"] + config["modeltype"] + ".p"
     tools.pickle_dump(resultspath,Result)
 
 if __name__ == "__main__":

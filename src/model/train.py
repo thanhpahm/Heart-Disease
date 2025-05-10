@@ -6,13 +6,15 @@ def train(config):
     # Load the data
     filepath = config["dataprocesseddirectory"] + "train.csv"
     [X, y] = dataio.load(filepath)
+    print(X[5])
+    print(y[5])
     
     # Train the model
     Model = model.Model(config)
     Model.train(X,y)
     
     # Save the trained model
-    tools.pickle_dump(config["modelpath"], Model)
+    tools.pickle_dump(config["modelpath"] + config["modeltype"] + ".pkl", Model)
 
 if __name__ == "__main__":
     config = tools.load_config()

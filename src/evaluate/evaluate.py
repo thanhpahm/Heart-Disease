@@ -1,4 +1,4 @@
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 from src.common import tools
 
 class Results:
@@ -13,6 +13,7 @@ class Results:
     def get_metrics(self):
         self.metrics['confusion_matrix'] = confusion_matrix(self.y_true,self.y_pred)
         self.metrics["accuracy"] = accuracy_score(self.y_true,self.y_pred)
+        self.metrics["classification_report"] = classification_report(self.y_true,self.y_pred)
 
     def print_metrics(self):
         for key in self.metrics:
@@ -22,7 +23,7 @@ if __name__ == "__main__":
     config = tools.load_config()
     
     # Load results
-    resultspath = config["resultsrawpath"]
+    resultspath = config["resultsrawpath"] + config["modeltype"] + ".p"
     Results = tools.pickle_load(resultspath)
     
     # Calculate metrics
@@ -30,6 +31,6 @@ if __name__ == "__main__":
     Results.print_metrics()
     
     # Save metrics
-    validationpath = config["resultsevaluatedpath"]
+    validationpath = config["resultsevaluatedpath"] + config["modeltype"] + ".p"
     tools.pickle_dump(validationpath, Results)
     
