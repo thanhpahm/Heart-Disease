@@ -17,11 +17,11 @@ class Model:
     def initialize(self):
         match self.config["modeltype"]:
             case "RandomForestClassifier":
-                self.model = RandomForestClassifier()
+                self.model = RandomForestClassifier(n_estimators= 100, max_depth= 5,random_state= 1)
             case "LogisticRegression":
-                self.model = LogisticRegression(solver="lbfgs", max_iter=200)
+                self.model = LogisticRegression(solver="lbfgs", max_iter= 1_000)
             case "DecisionTree":
-                self.model = DecisionTreeClassifier()
+                self.model = DecisionTreeClassifier(max_depth= 5)
             case "NeuralNetwork":
                 parameters = {
                             'solver': 'lbfgs', 

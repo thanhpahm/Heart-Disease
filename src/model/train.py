@@ -7,8 +7,6 @@ def train(config):
     # Load the data
     filepath = config["dataprocesseddirectory"] + "train.csv"
     [X, y] = dataio.load(filepath)
-    print(X[5])
-    print(y[5])
     
     # Train the model
     Model = model.Model(config)
