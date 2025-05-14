@@ -24,6 +24,7 @@ evaluate:
 # Produce visualizations
 visualize:
 	python -m src.visualization.visualize
+	python -m src.visualization.model_comparison
 
 # Run all: RUNS ALL SCRIPTS - DEFAULT
 all: download preprocess train test evaluate visualize
