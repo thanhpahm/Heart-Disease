@@ -6,7 +6,7 @@ datainterimdirectory: data/interim/
 dataprocesseddirectory: data/processed/
 
 # MODELS
-modeltype: NeuralNetwork
+modeltype: DecisionTree
 modelpath: models/
 
 # RESULTS
