@@ -5,7 +5,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import GridSearchCV
-
 class Model:
     # This class provides an interface for the model (while this is not
     # strictly needed for a Random Forest classifier, it shows an example
@@ -24,23 +23,19 @@ class Model:
             case "DecisionTree":
                 self.model = DecisionTreeClassifier()
             case "NeuralNetwork":
-                self.model = MLPClassifier()
+                parameters = {
+                            'solver': 'lbfgs', 
+                            'alpha': 1e-4,
+                            'hidden_layer_sizes':(9,14,14,2),
+                            'random_state': 1,
+                            'max_iter': 1_000} 
+                self.model = MLPClassifier(**parameters)
             case _:
                 raise ValueError(f"Model type {self.config['modeltype']} is not recognized.")
     
     def train(self,X,y):
         assert self.model is not None
-        gridsearch_models = {
-            "RandomForestClassifier": {"n_estimators": [50, 100]},
-            "NeuralNetwork": {"hidden_layer_sizes": [(50,), (100,)]},
-        }
-        modeltype = self.config["modeltype"]
-        if modeltype in gridsearch_models:
-            grid_cv = GridSearchCV(self.model, gridsearch_models[modeltype], cv=5)
-            grid_cv.fit(X, y)
-            self.model = grid_cv.best_estimator_
-        else:
-            self.model.fit(X, y)
+        self.model.fit(X, y)
         
     def predict_proba(self,X):
         prediction = self.model.predict_proba(X)

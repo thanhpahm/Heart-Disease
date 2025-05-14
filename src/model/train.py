@@ -2,6 +2,7 @@ from src.model import model
 import src.common.tools as tools
 import src.data.dataio as dataio
 
+
 def train(config):
     # Load the data
     filepath = config["dataprocesseddirectory"] + "train.csv"

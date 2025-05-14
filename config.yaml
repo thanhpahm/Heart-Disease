@@ -6,7 +6,7 @@ datainterimdirectory: data/interim/
 dataprocesseddirectory: data/processed/
 
 # MODELS
-modeltype: LogisticRegression
+modeltype: NeuralNetwork
 modelpath: models/
 
 # RESULTS
