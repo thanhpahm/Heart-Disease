@@ -1,9 +1,5 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-matplotlib
-numpy
-pandas
-pyyaml
-scikit-learn
-dask
-dask-ml
+matplotlib==3.10.3
+numpy==2.2.5
+pandas==2.2.3
+PyYAML==6.0.2
+scikit_learn==1.6.1
